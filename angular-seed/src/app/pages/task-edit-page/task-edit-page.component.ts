@@ -24,7 +24,7 @@ export class TaskEditPageComponent implements OnInit {
   }
   
   onSubmit() {
-     this.todoService.adicionar(
+     this.todoService.create(
      this.todoForm.get('description').value,
      this.todoForm.get('priority').value,
      Boolean(this.todoForm.get('completed').value)

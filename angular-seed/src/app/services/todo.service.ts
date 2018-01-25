@@ -15,7 +15,7 @@ export class TodoService {
         return this.todos;
     } 
     
-    adicionar(description,priority,completed){
+    create(description,priority,completed){
         this.todos.push(new Todo(description,priority,completed))
     }
 }
