@@ -12,6 +12,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { TodoService } from './services/todo.service';
+
 const ROUTES = [
   { path: '', component: HomePageComponent },
   { path: 'tasks', component: TaskListPageComponent },
@@ -33,7 +35,7 @@ const ROUTES = [
     RouterModule.forRoot(ROUTES),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
