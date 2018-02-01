@@ -23,14 +23,18 @@ export class TaskEditPageComponent implements OnInit {
     });
   }
   
-  onSubmit() {
-     this.todoService.create(
-     this.todoForm.get('description').value,
-     this.todoForm.get('priority').value,
-     Boolean(this.todoForm.get('completed').value)
-   );
+ onSubmit() {
+    this.todoService.create(
+      this.todoForm.get('description').value,
+      this.todoForm.get('priority').value,
+      Boolean(this.todoForm.get('completed').value)
+    ).subscribe(serverResponse=>{
+        this.router.navigate(['/tasks']);
+    }, error=>{
+      console.log(error);
+    });
+  }
 
-   this.router.navigate(['/tasks']);
+  
  }
 
-}
