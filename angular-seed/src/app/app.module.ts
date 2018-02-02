@@ -22,6 +22,8 @@ import { INITIAL_CONFIG } from './common/config/initial-config';
 import { HttpModule } from '@angular/http';
 import { AuthService } from './common/auth.service';
 
+import { AppDataService } from './common/app-data.service';
+import { APIService } from './common/api.service';
 
 const ROUTES = [
   { path: '', component: SignInPageComponent },
@@ -64,7 +66,10 @@ const ROUTES = [
     },
     TodoService,
     AppConfiguration,
-    UsersService
+    UsersService,
+    AppDataService,
+    AuthService,
+    APIService
     ],
   bootstrap: [AppComponent]
 })

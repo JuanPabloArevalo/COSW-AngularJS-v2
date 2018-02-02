@@ -6,7 +6,8 @@ import { APIService } from '../common/api.service';
 
 @Injectable()
 export class UsersService extends APIService {
-  constructor(
+  
+constructor(
     public config: AppConfiguration,
     public authService: AuthService,
     public http: Http

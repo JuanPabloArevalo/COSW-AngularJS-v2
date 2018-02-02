@@ -9,18 +9,13 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 @Injectable()
 export class TodoService extends APIService{
     private resourceUrl = 'api/todo';
-    
-private todos: Todo[] = [
-        new Todo('todo 1'),
-        new Todo('todo 2', 1, true),
-        new Todo('todo 3')
-    ];
-    
-    constructor(    public config: AppConfiguration,
-    public authService: AuthService,
-    public http: Http) { 
-    super(config, authService, http);
-}
+        
+    constructor(    
+        public config: AppConfiguration,
+        public authService: AuthService,
+        public http: Http) { 
+            super(config, authService, http);
+        }
 
     list(): Observable<Todo[]> {
         return this.get(this.resourceUrl);
