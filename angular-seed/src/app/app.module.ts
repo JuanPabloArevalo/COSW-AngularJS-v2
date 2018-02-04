@@ -66,10 +66,10 @@ const ROUTES = [
     },
     TodoService,
     AppConfiguration,
-    UsersService,
     AppDataService,
     AuthService,
-    APIService
+    APIService,
+    UsersService
     ],
   bootstrap: [AppComponent]
 })
